@@ -20,12 +20,11 @@ author: Patricia Lago
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://patricialago.com"
-
+  The Framework: "framework"
+  Metrics: "metrics"
+  About: "about"
+  
+  
 ################
 # --- Logo --- #
 ################

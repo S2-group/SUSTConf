@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sample blog post to learn markdown tips
-subtitle: There's lots to learn!
-gh-repo: daattali/beautiful-jekyll
+title: Sustainability at 20th European Conference on Software Architecture (ECSA 2026)
+subtitle: We are committed to sustainability
+#gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-tags: [test]
+tags: [conferences]
 comments: true
 mathjax: true
-author: Bill Smith
+author: Vinicius dos Santos
 ---
 
 {: .box-success}
