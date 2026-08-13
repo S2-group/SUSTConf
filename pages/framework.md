@@ -11,11 +11,8 @@ This checklist synthesizes the possible actions that could be adopted for sustai
 
 ## Legend & Rubric
 
-### Focus Areas
-* **Green Titles**: Focus areas (priorities for ECSA).
-
 ### Priority Levels
-Reflects the priority of items for the conference, as defined by the **rulebook v1.1**.
+Reflects the priority of items for the conference, should be defined by the organizers.
 
 * **Mandatory (M):** The Organizing Committee (OC) can only deviate with approval from the Steering Committee (SC).
 * **Strongly Recommended (S):** The OC may deviate but must provide justification to the SC.
