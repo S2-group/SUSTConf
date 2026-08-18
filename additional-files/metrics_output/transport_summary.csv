@@ -1,0 +1,2 @@
+total_registrations,participants_with_route,participants_without_route,route_coverage_percent,total_transport_legs,total_distance_km,total_distance_million_km,estimated_emissions_kg_co2e,estimated_emissions_t_co2e,mean_distance_per_participant_km,median_distance_per_participant_km,mean_emissions_per_participant_kg_co2e,median_emissions_per_participant_kg_co2e,empty_text_values,invalid_non_route_values,unknown_mode_codes
+122,97,25,79.5,125,182045.9,0.182,9675.5,9.676,1876.8,937.9,99.7,28.0,23,2,12

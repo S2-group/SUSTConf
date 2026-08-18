@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SUSConf Framework
+title: SUSTConf Framework
 subtitle: A Framework for Sustainable Conferences in Software Engineering
 permalink: /framework/
 ---
@@ -32,159 +32,153 @@ Reflects the current status of an item.
 ### INSTRUCTIONS:
 
 Fill the tables below using the legend and rubric provided in this document. For this, it is recommended to make a group discussion with general chairs looking for the actions that are done, should be done (TODO), and are rejected (won’t be done). Take “notes” in the appropriate column with the rationale for adopting or rejecting an action. 
+# SUSTConf Framework
 
-# **Venue \* (S)**
+**A Framework for Sustainable Conferences in Software Engineering**
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Select an energy-efficient venue |  |  |  |
-| 2 | Select a venue that adopts water conservation actions |  |  |  |
-| 3 | Select a venue that reduces waste |  |  |  |
-| 4 | Select a venue that is involved with community and social actions |  |  |  |
-| 5 | Select a venue with electric mobility support |  |  |  |
+This checklist summarizes possible actions that can be adopted to improve the sustainability of conferences.
 
+For each action, discuss whether it should be adopted, completed, or rejected.
 
-# **Food \* (S)**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Provide high-quality and creative vegetarian and vegan food |  |  |  |
-| 2 | Reduce the animal-based products |  |  |  |
-| 3 | Manage leftovers |  |  |  |
-| 4 | Buy local food |  |  |  |
-| 5 | Provide information about vegetarian-friendly restaurants |  |  |  |
-| 6 | Consolidate menus (co-located events) to order the same options to reduce food waste |  |  |  |
-| 7 | Order anticipated 80% of the food for registered attendees |  |  |  |
+## Venue
 
+- <input type="checkbox"> Select an energy-efficient venue
+- <input type="checkbox"> Select a venue that adopts water conservation actions
+- <input type="checkbox"> Select a venue that reduces waste
+- <input type="checkbox"> Select a venue that is involved with community and social actions
+- <input type="checkbox"> Select a venue with electric mobility support
 
-# **Conference Material \* (S)**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Limit conference material |  |  |  |
-| 2 | Avoid specific T-shirts for staff |  |  |  |
-| 3 | Limit decoration and signage |  |  |  |
-| 4 | Provide an opt-out to not receive any gifts from the conference |  |  |  |
-| 5 | Provide an opt-out of print programs |  |  |  |
-| 6 | Opt for recycled, black and white signage |  |  |  |
-| 7 | Create digital material instead of printed material (printed material is uncertain) |  |  |  |
-| 8 | Source local printers using sustainable materials |  |  |  |
-| 9 | Look for recycling of registration badges, badge holders, and lanyards |  |  |  |
-| 10 | Search for locally sourced (and recyclable) items (paper) |  |  |  |
-| 11 | Create purposeful, durable, useful, reusable conference swag |  |  |  |
-| 12 | Reduce the number of gifts |  |  |  |
+## Food
 
+- <input type="checkbox"> Provide high-quality and creative vegetarian and vegan food
+- <input type="checkbox"> Reduce animal-based products
+- <input type="checkbox"> Manage leftovers
+- <input type="checkbox"> Buy local food
+- <input type="checkbox"> Provide information about vegetarian-friendly restaurants
+- <input type="checkbox"> Consolidate menus for co-located events to reduce food waste
+- <input type="checkbox"> Order approximately 80% of the anticipated food for registered attendees
 
-# **Travel \* (O)**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Find an event location easily accessible (by public transportation, walking, or biking) |  |  |  |
-| 2 | Avoid airplanes and encourage alternatives (especially trains) |  |  |  |
-| 3 | Establish partnerships with travel agencies |  |  |  |
-| 4 | Encourage car pooling |  |  |  |
-| 5 | Encourage resource pooling (e.g., hotel) |  |  |  |
+## Conference Material
 
+- <input type="checkbox"> Limit conference material
+- <input type="checkbox"> Avoid specific T-shirts for staff
+- <input type="checkbox"> Limit decoration and signage
+- <input type="checkbox"> Provide an opt-out from receiving conference gifts
+- <input type="checkbox"> Provide an opt-out from printed programs
+- <input type="checkbox"> Use recycled, black-and-white signage
+- <input type="checkbox"> Create digital material instead of printed material
+- <input type="checkbox"> Source local printers using sustainable materials
+- <input type="checkbox"> Recycle registration badges, badge holders, and lanyards
+- <input type="checkbox"> Use locally sourced and recyclable paper items
+- <input type="checkbox"> Create purposeful, durable, useful, and reusable conference swag
+- <input type="checkbox"> Reduce the number of gifts
 
-# **Transport \* (O)**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Provide free public transport for participants |  |  |  |
-| 2 | Encourage bikes |  |  |  |
-| 3 | Include a carbon calculator |  |  |  |
+## Travel
 
+- <input type="checkbox"> Select an event location easily accessible by public transportation, walking, or biking
+- <input type="checkbox"> Avoid airplanes and encourage alternatives, especially trains
+- <input type="checkbox"> Establish partnerships with travel agencies
+- <input type="checkbox"> Encourage carpooling
+- <input type="checkbox"> Encourage resource pooling, such as sharing hotels
 
-# **Digital Communication (S)**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | :---- | ----- | ----- | ----- |
-| **1** | Create a low-impact digital website |  |  |  |
-| 2 | Offer posters available digitally on monitors, enabling the digital presentation of speakers |  |  |  |
-| 3 | Create a sustainability webpage |  |  |  |
+## Transport
 
+- <input type="checkbox"> Provide free public transport for participants
+- <input type="checkbox"> Encourage cycling
+- <input type="checkbox"> Include a carbon calculator
 
-# **Attendance (S)**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Improve virtual participation |  |  |  |
-| **2** | **Flexibilize to virtual attendance** |  |  |  |
-| 3 | Create a virtual participant day, outside conference dates |  |  |  |
-| 4 | Create a newcomer reception |  |  |  |
-| 5 | Invest in inclusivity (e.g., avoiding gender in badges, color-blind friendly, and elevators are available) |  |  |  |
-| 6 | Host a virtual participant chair (focus on virtual aspects) |  |  |  |
+## Digital Communication
 
+- <input type="checkbox"> Create a low-impact digital website
+- <input type="checkbox"> Make posters available digitally on monitors
+- <input type="checkbox"> Create a sustainability webpage
 
-# **Information**
+---
 
-| ID | Action | Priority | Status | Notes |
-| ----- | ----- | ----- | ----- | ----- |
-| 1 | Details about travelling |  |  |  |
+## Attendance
 
+- <input type="checkbox"> Improve virtual participation
+- <input type="checkbox"> Enable flexible virtual attendance
+- <input type="checkbox"> Create a virtual participant day outside the conference dates
+- <input type="checkbox"> Create a newcomer reception
+- <input type="checkbox"> Invest in inclusivity
+- <input type="checkbox"> Host a virtual participant chair focused on virtual aspects
 
-# **Waste**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Avoid non-compostable cutlery |  |  |  |
-| 2 | Encourage reusable bottles and filling stations & minimal use of single-use bottles |  |  |  |
-| 3 | Request no water bottle |  |  |  |
-| 4 | Labeled separated bins (trash, compost, recycling) |  |  |  |
-| 5 | Prevent preparing unnecessary food |  |  |  |
-| 6 | Minimize food waste |  |  |  |
-| 7 | Maximise recycling |  |  |  |
+## Information
 
+- <input type="checkbox"> Provide detailed information about travelling to the conference
 
-# **Staying**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Reduce the number of overnights |  |  |  |
+## Waste
 
+- <input type="checkbox"> Avoid non-compostable cutlery
+- <input type="checkbox"> Encourage reusable bottles and filling stations
+- <input type="checkbox"> Minimize the use of single-use bottles
+- <input type="checkbox"> Allow participants to request no water bottle
+- <input type="checkbox"> Provide clearly labeled separated bins for trash, compost, and recycling
+- <input type="checkbox"> Prevent preparing unnecessary food
+- <input type="checkbox"> Minimize food waste
+- <input type="checkbox"> Maximize recycling
 
-# **Social**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Offer free childcare |  |  |  |
-| 2 | Host community events during lunch periods |  |  |  |
-| 3 | Host LGBTQ+ event (e.g., lunch, dinner) |  |  |  |
-| 4 | Support religious diversity |  |  |  |
-| 5 | Create a committee to solve discriminatory problems |  |  |  |
-| 6 | Accessibility |  |  |  |
-| 7 | Provide support for neurodiverse participants |  |  |  |
+## Staying
 
+- <input type="checkbox"> Reduce the number of overnights
 
-# **Accessibility**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Provide support for neurodiverse participants |  |  |  |
+## Social
 
+- <input type="checkbox"> Offer free childcare
+- <input type="checkbox"> Host community events during lunch periods
+- <input type="checkbox"> Host an LGBTQ+ event
+- <input type="checkbox"> Support religious diversity
+- <input type="checkbox"> Create a committee to address discriminatory problems
+- <input type="checkbox"> Ensure accessibility
+- <input type="checkbox"> Provide support for neurodiverse participants
 
-# **Actions**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Compensate carbon emission |  |  |  |
-| 2 | Provide sustainability tips |  |  |  |
-| 3 | Find opportunities to give back to the local community |  |  |  |
-| 4 | Forbid LLMs for paper writing |  |  |  |
-| 5 | Include two sustainability co-chairs |  |  |  |
+## Accessibility
 
+- <input type="checkbox"> Provide support for neurodiverse participants
 
-# **Co-Location**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Co-Locate events to reduce travel emissions |  |  |  |
+## Actions
 
+- <input type="checkbox"> Compensate for carbon emissions
+- <input type="checkbox"> Provide sustainability tips
+- <input type="checkbox"> Find opportunities to give back to the local community
+- <input type="checkbox"> Forbid LLMs for paper writing
+- <input type="checkbox"> Include two sustainability co-chairs
 
-# **New Ideas**
+---
 
-| ID | Action | Priority | Status | Notes |
-| :---: | ----- | ----- | ----- | ----- |
-| 1 | Creation of a sustainability checklist/gamification |  |  |  |
-| 2 | Create sustainability-score |  |  |  |
-| **3** | **Sustainability award** |  |  |  |
+## Co-Location
+
+- <input type="checkbox"> Co-locate events to reduce travel emissions
+
+---
+
+## New Ideas
+
+- <input type="checkbox"> Create a sustainability checklist or gamification system
+- <input type="checkbox"> Create a sustainability score
+- <input type="checkbox"> Create a sustainability award
