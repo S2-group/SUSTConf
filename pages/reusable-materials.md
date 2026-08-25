@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Resources
-subtitle: Reusable resources for your conference
-permalink: /resources/
+title: Reusable Materials
+subtitle: Reusable materials for your conference
+permalink: /reusable-materials/
+wide-content: true
 ---
 {% assign resource_posts = site.posts | where_exp: "post", "post.tags contains 'resource'" %}
 
 {% comment %}
-Collect all tags used by resources, excluding the "resource" tag itself.
+Collect all tags used by reusable materials, excluding the "resource" tag itself.
 {% endcomment %}
 
 {% assign resource_types = "" | split: "" %}
@@ -24,21 +25,21 @@ Collect all tags used by resources, excluding the "resource" tag itself.
 
 <div class="resources">
 
-  <!-- Resource filters -->
+  <!-- Reusable material filters -->
 
   <div class="resources-filter">
 
 <div class="resources-filter-header">
   <div>
-    <h2 class="resources-filter-title">Available resources</h2>
+    <h2 class="resources-filter-title">Available Reusable Materials</h2>
     <p class="resources-filter-description">
-      Browse reusable resources for your conference and filter them by type.
+      Browse reusable materials for your conference and filter them by type.
     </p>
   </div>
 
   <div class="resources-count">
     <span id="resources-visible-count">{{ resource_posts.size }}</span>
-    <span>resources</span>
+    <span>reusable materials</span>
   </div>
 </div>
 
@@ -46,15 +47,15 @@ Collect all tags used by resources, excluding the "resource" tag itself.
 
   <div class="resources-filter-group">
     <label for="resource-type-filter" class="resources-filter-label">
-      Resource type
+      Reusable material type
     </label>
 
     <select
       id="resource-type-filter"
       class="form-select resources-filter-select"
-      aria-label="Filter resources by type">
+      aria-label="Filter reusable materials by type">
 
-      <option value="all">All resources</option>
+      <option value="all">All reusable materials</option>
 
       {% assign sorted_resource_types = resource_types | sort %}
       {% for type in sorted_resource_types %}
@@ -75,29 +76,25 @@ Collect all tags used by resources, excluding the "resource" tag itself.
       type="search"
       id="resource-search"
       class="form-control resources-search-input"
-      placeholder="Search resources..."
-      aria-label="Search resources">
+      placeholder="Search reusable materials..."
+      aria-label="Search reusable materials">
   </div>
 
 </div>
 
   </div>
 
-  <!-- Resources table -->
+  <!-- Reusable materials table -->
 
   <div class="resources-table-wrapper">
 
 {% if resource_posts.size > 0 %}
 
   <table class="resources-table">
-    <caption class="visually-hidden">
-      Available reusable conference resources
-    </caption>
-
     <thead>
       <tr>
         <th scope="col" class="resource-name-column">
-          Resource
+          Reusable Material
         </th>
 
         <th scope="col" class="resource-type-column">
@@ -106,6 +103,10 @@ Collect all tags used by resources, excluding the "resource" tag itself.
 
         <th scope="col" class="resource-author-column">
           Author
+        </th>
+
+        <th scope="col" class="resource-link-column">
+          Links
         </th>
 
       </tr>
@@ -181,6 +182,16 @@ Collect all tags used by resources, excluding the "resource" tag itself.
           </td>
 
 
+          <td class="resource-link-cell">
+            <a
+              href="{{ post.url | relative_url }}"
+              class="resource-link"
+              aria-label="Open {{ post.title | strip_html }}">
+              Link
+            </a>
+          </td>
+
+
         </tr>
 
       {% endfor %}
@@ -199,10 +210,10 @@ Collect all tags used by resources, excluding the "resource" tag itself.
       🔎
     </div>
 
-    <h3>No resources found</h3>
+    <h3>No reusable materials found</h3>
 
     <p>
-      Try selecting another resource type or changing your search.
+      Try selecting another reusable material type or changing your search.
     </p>
 
     <button
@@ -224,10 +235,10 @@ Collect all tags used by resources, excluding the "resource" tag itself.
       📚
     </div>
 
-    <h3>No resources available yet</h3>
+    <h3>No reusable materials available yet</h3>
 
     <p>
-      Reusable conference resources will appear here as they are added.
+      Reusable conference materials will appear here as they are added.
     </p>
 
   </div>
@@ -239,6 +250,26 @@ Collect all tags used by resources, excluding the "resource" tag itself.
 </div>
 
 <style>
+
+  @media (min-width: 992px) {
+
+    .wide-content-page > .row > .wide-content-column {
+      flex: 0 0 91.666667%;
+      max-width: 91.666667%;
+      margin-left: 4.166667%;
+    }
+
+  }
+
+  @media (min-width: 1200px) {
+
+    .wide-content-page > .row > .wide-content-column {
+      flex: 0 0 83.333333%;
+      max-width: 83.333333%;
+      margin-left: 8.333333%;
+    }
+
+  }
 
   /* ============================================================
      Resources page
@@ -399,6 +430,10 @@ Collect all tags used by resources, excluding the "resource" tag itself.
     width: 20%;
   }
 
+  .resource-link-column {
+    width: 15%;
+  }
+
 
 
   /* ============================================================
@@ -465,6 +500,17 @@ Collect all tags used by resources, excluding the "resource" tag itself.
   .resource-author-cell {
     color: #5F6F63;
     font-size: 0.9rem;
+  }
+
+  .resource-link {
+    color: #2E7D5B;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .resource-link:hover,
+  .resource-link:focus {
+    color: #225D44;
   }
 
   .resource-no-value {
@@ -586,7 +632,8 @@ Collect all tags used by resources, excluding the "resource" tag itself.
     }
 
     .resource-type-cell::before,
-    .resource-author-cell::before {
+    .resource-author-cell::before,
+    .resource-link-cell::before {
       display: block;
       margin-bottom: 0.35rem;
       color: #7A857D;
@@ -602,6 +649,10 @@ Collect all tags used by resources, excluding the "resource" tag itself.
 
     .resource-author-cell::before {
       content: "Author";
+    }
+
+    .resource-link-cell::before {
+      content: "Links";
     }
 
 

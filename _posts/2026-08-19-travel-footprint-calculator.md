@@ -9,7 +9,7 @@ tags:
   - transport_carbon_calculator 
 comments: true
 mathjax: true
-author: Andrea Janes (Free University Bozen/Bolzano)
+author: Andrea Janes (Free University Bozen-Bolzano)
 ---
 
 <div class="carbon-calculator">

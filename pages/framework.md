@@ -85,7 +85,7 @@ permalink: /framework/
 
 
     /* =========================================================
-       Resources column
+      Reusable Materials column
        ========================================================= */
 
     th.resources-column,
@@ -346,7 +346,7 @@ permalink: /framework/
 <header class="intro framework-intro">
 
   <p class="lead">
-    The <strong>SUSTConf Framework</strong> is a collection of reusable resources
+    The <strong>SUSTConf Framework</strong> is a collection of reusable materials
     that can support conference organizers in planning, implementing, and evaluating
     sustainability actions.
   </p>
@@ -367,7 +367,7 @@ permalink: /framework/
     <span class="pipeline-kicker">HOW TO USE THE FRAMEWORK</span>
     <h2>From planning to sustainability reporting</h2>
     <p>
-      Start with the checklist, use the framework resources to prepare the selected
+      Start with the checklist, use the reusable materials provided by the framework to prepare the selected
       actions, execute them throughout the conference lifecycle, collect evidence
       and metrics, and share the results with the community.
     </p>
@@ -399,8 +399,8 @@ permalink: /framework/
         <span class="step-phase">DURING THE ORGANIZATION</span>
         <h3>Prepare the actions</h3>
         <p>
-          Sustainability Chairs use the reusable resources provided by the framework
-          to design and set up the actions selected in the checklist. The resources
+          Sustainability Chairs use the reusable materials provided by the framework
+          to design and set up the actions selected in the checklist. The reusable materials
           provide practical support for turning the selected actions into concrete
           organizational activities.
         </p>
@@ -440,11 +440,11 @@ permalink: /framework/
 
   <div class="pipeline-footer">
     <div>
-      <strong>Checklist → Resources → Actions → Metrics → Report</strong>
+      <strong>Checklist → Reusable Materials → Actions → Metrics → Report</strong>
     </div>
     <p>
       The checklist establishes what the conference intends to do; the framework
-      resources support how it is done; the pipeline ensures that actions are
+      reusable materials support how it is done; the pipeline ensures that actions are
       implemented, measured, and reported.
     </p>
   </div>
@@ -653,13 +653,13 @@ permalink: /framework/
   </main>
 
   <!-- =========================================================
-       RESOURCE COUNTS
+      REUSABLE MATERIAL COUNTS
        =========================================================
 
-       Resource posts are Jekyll posts tagged "resource".
+      Reusable material posts are Jekyll posts tagged "resource".
 
-       Every additional tag on a resource post is treated as
-       a resource category.
+      Every additional tag on a reusable material post is treated as
+      a reusable material category.
 
        The category/tag is the same as the checklist criterion ID.
 
@@ -673,16 +673,16 @@ permalink: /framework/
 
          id: food_local
 
-       will therefore show the number of matching resource posts.
+      will therefore show the number of matching reusable material posts.
        ========================================================= -->
 
   <script>
 
     /*
-     * Resource counts.
+    * Reusable material counts.
      *
-     * Liquid collects all tags used by resource posts and counts
-     * how many resource posts use each tag.
+    * Liquid collects all tags used by reusable material posts and counts
+    * how many reusable material posts use each tag.
      */
 
     const resourceCounts = {};
@@ -1024,7 +1024,7 @@ permalink: /framework/
 
 
           /*
-           * Resources column.
+           * Reusable Materials column.
            */
 
           const resourcesHeader =
@@ -1032,7 +1032,7 @@ permalink: /framework/
 
 
           resourcesHeader.textContent =
-            "Resources";
+            "Reusable Materials";
 
 
           resourcesHeader.className =
@@ -1178,7 +1178,7 @@ permalink: /framework/
 
               /*
                * --------------------------------------------------
-               * Resources
+               * Reusable Materials
                * --------------------------------------------------
                */
 
@@ -1195,14 +1195,14 @@ permalink: /framework/
 
 
               /*
-               * If resources exist, make the number a link.
+               * If reusable materials exist, make the number a link.
                *
                * Example:
                *
-               *   /resources/?type=food_local
+               *   /reusable-materials/?type=food_local
                *
-               * The Resources page can then use the "type"
-               * parameter to filter the resources.
+               * The Reusable Materials page can then use the "type"
+               * parameter to filter the reusable materials.
                */
 
               if (resourceCount > 0) {
@@ -1212,7 +1212,7 @@ permalink: /framework/
 
 
                 resourcesLink.href =
-                  `{{ '/resources/' | relative_url }}?type=${encodeURIComponent(criterion.id)}`;
+                  `{{ '/reusable-materials/' | relative_url }}?type=${encodeURIComponent(criterion.id)}`;
 
 
                 resourcesLink.textContent =
@@ -1225,7 +1225,7 @@ permalink: /framework/
 
                 resourcesLink.setAttribute(
                   "aria-label",
-                  `View ${resourceCount} resources for ${criterion.text}`
+                  `View ${resourceCount} reusable materials for ${criterion.text}`
                 );
 
 
