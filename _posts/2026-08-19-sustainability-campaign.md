@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sustainability Campaign
-subtitle: A reusable campaign for making sustainability visible before, during, and after your conference
+subtitle: A reusable campaign for making sustainability visible before, during, and after your conference, credits IEEE TCSE seed funding
 #gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: 
@@ -9,7 +9,7 @@ tags:
   - sustainability_campaign 
 comments: true
 mathjax: true
-author: Patricia Lago (Vrije Universiteit Amsterdam)
+author: Patricia Lago and Markus Funke (Vrije Universiteit Amsterdam)
 ---
 
 
