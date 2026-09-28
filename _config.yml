@@ -51,9 +51,9 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "p.lago@vu.nl"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: p.lago
-  github: plago
+  #rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  #facebook: p.lago
+  github: https://github.com/S2-group/SUSTConf/
   #twitter: daattali
   #patreon: DeanAttali
   #youtube: "@daattali"
