@@ -3,341 +3,11 @@ layout: page
 title: SUSTConf Framework
 subtitle: A Framework for Sustainability-Aware Conferences
 permalink: /framework/
+wide-content: true
 ---
-
+<link rel="stylesheet" href="../assets/css/framework.css">
 <script src="../assets/data/sustConf-checklist-data.js"></script>
-
-  <style>
-
-    body {
-      font-family: Lora, Arial, sans-serif;
-      line-height: 1.5;
-      margin: 2rem;
-      color: #222;
-    }
-
-
-    h1 {
-      margin-bottom: 0.25rem;
-    }
-
-
-    h2 {
-      margin-top: 2rem;
-    }
-
-
-    h3 {
-      margin-top: 1.5rem;
-    }
-
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-
-
-    th,
-    td {
-      border: 1px solid #ccc;
-      padding: 0.6rem;
-      text-align: left;
-      vertical-align: top;
-    }
-
-
-    th {
-      background: #f5f5f5;
-    }
-
-
-    /* =========================================================
-       Checkbox column
-       ========================================================= */
-
-    th.check-column,
-    td.check-column {
-      width: 50px;
-      text-align: center;
-      vertical-align: middle;
-    }
-
-
-    /* =========================================================
-       Criterion column
-       ========================================================= */
-
-    th.criterion-column {
-      width: auto;
-    }
-
-
-    /* =========================================================
-       Priority and status columns
-       ========================================================= */
-
-    th.priority-column,
-    th.status-column {
-      width: 20%;
-    }
-
-
-    /* =========================================================
-      Reusable Materials column
-       ========================================================= */
-
-    th.resources-column,
-    td.resources-column {
-      width: 100px;
-      text-align: center;
-      vertical-align: middle;
-    }
-
-
-    td.resources-column a {
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-
-    td.resources-column a:hover {
-      text-decoration: underline;
-    }
-
-
-    td.check-column input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      cursor: pointer;
-    }
-
-
-    label {
-      cursor: pointer;
-    }
-
-
-    select {
-      padding: 0.35rem;
-      width: 100%;
-      max-width: 220px;
-    }
-
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-
-    .intro {
-      margin-bottom: 2rem;
-    }
-
-    /* =========================================================
-       Framework overview and pipeline
-       ========================================================= */
-
-    .framework-intro {
-      max-width: 900px;
-    }
-
-    .framework-intro .lead {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .framework-pipeline {
-      margin: 3rem 0 3.5rem;
-    }
-
-    .pipeline-header {
-      max-width: 900px;
-      margin-bottom: 2rem;
-    }
-
-    .pipeline-kicker {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-size: 0.78rem;
-      font-weight: bold;
-      letter-spacing: 0.12em;
-      color: #666;
-    }
-
-    .pipeline-header h2 {
-      margin: 0 0 0.5rem;
-    }
-
-    .pipeline-header p {
-      margin: 0;
-      color: #555;
-      max-width: 800px;
-    }
-
-    .pipeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-      max-width: 1000px;
-    }
-
-    .pipeline-step {
-      position: relative;
-      display: grid;
-      grid-template-columns: 3.5rem 1fr;
-      gap: 1.25rem;
-      border: 1px solid #d8d8d8;
-      background: #fff;
-      padding: 1.4rem 1.5rem;
-      min-height: 0;
-    }
-
-    .pipeline-step + .pipeline-step {
-      border-top: none;
-    }
-
-    .pipeline-step:not(:last-child)::after {
-      content: "↓";
-      position: absolute;
-      left: 1.05rem;
-      bottom: -0.8rem;
-      z-index: 2;
-      width: 1.5rem;
-      height: 1.5rem;
-      text-align: center;
-      line-height: 1.35rem;
-      background: #fff;
-      color: #777;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .start-step {
-      border: 2px solid #555;
-    }
-
-    .step-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 1px solid #777;
-      border-radius: 50%;
-      font-weight: bold;
-    }
-
-    .step-phase {
-      display: block;
-      margin-bottom: 0.45rem;
-      font-size: 0.72rem;
-      line-height: 1.3;
-      font-weight: bold;
-      letter-spacing: 0.06em;
-      color: #666;
-    }
-
-    .step-content {
-      max-width: 850px;
-    }
-
-    .step-content h3 {
-      margin: 0 0 0.7rem;
-    }
-
-    .step-content p {
-      margin: 0;
-      color: #444;
-    }
-
-    .step-callout {
-      margin-top: 1.2rem;
-      padding: 0.8rem;
-      border-left: 3px solid #555;
-      background: #f5f5f5;
-      font-size: 0.92rem;
-    }
-
-    .pipeline-footer {
-      margin-top: 1.5rem;
-      padding: 1.1rem 1.3rem;
-      border-top: 2px solid #222;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .pipeline-footer strong {
-      font-size: 1.05rem;
-    }
-
-    .pipeline-footer p {
-      margin: 0.35rem 0 0;
-      color: #555;
-    }
-
-    @media (max-width: 600px) {
-      .pipeline-step {
-        grid-template-columns: 2.8rem 1fr;
-        gap: 0.9rem;
-        padding: 1.2rem;
-      }
-
-      .pipeline-step:not(:last-child)::after {
-        left: 0.7rem;
-      }
-    }
-
-
-    .legend {
-      background: #f8f8f8;
-      border: 1px solid #ddd;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-
-    .legend p {
-      margin-top: 0.25rem;
-    }
-
-
-    .instructions {
-      background: #f8f8f8;
-      border-left: 4px solid #999;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0 2rem;
-    }
-
-
-    .sources {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 2px solid #ccc;
-    }
-
-
-    .sources li {
-      margin-bottom: 0.5rem;
-    }
-
-
-    .methodology {
-      margin-bottom: 2rem;
-    }
-
-
-    .error {
-      padding: 1rem;
-      background: #ffe6e6;
-      border: 1px solid #cc0000;
-      color: #990000;
-    }
-
-  </style>
-
-
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 
 <body>
 
@@ -535,14 +205,83 @@ permalink: /framework/
     should be done (TODO), and are rejected (won't be done).
   </p>
 
+  <p>
+    Use the <a href="#checklist-controls">Controls</a> to reorder the categories
+    so that the most important ones are discussed first, to show a
+    <strong>Notes</strong> column, and to work on the checklist offline or share it
+    with other chairs: export it to XLS or JSON, edit the file, and import it back
+    into this page.
+  </p>
+
 </section>
 
+
+<!-- =========================================================
+     CONTROLS (view options, export and import)
+     ========================================================= -->
+
+<section class="data-exchange" id="checklist-controls">
+  <h2>Controls</h2>
+  <p>
+    Adjust how the checklist is displayed and exchange it without creating a
+    session: export the values currently filled in below, share the file with
+    the other chairs, and import the edited file back into this page.
+  </p>
+  <div class="exchange-card view-card">
+    <h3>View</h3>
+    <div class="view-options">
+      <label class="toggle-option" for="toggle-notes">
+        <input type="checkbox" id="toggle-notes">
+        Show the <strong>Notes</strong> column
+      </label>
+      <button type="button" class="exchange-button" id="reset-order">Reset category order</button>
+    </div>
+    <p class="exchange-hint">
+      Use the <strong>↑</strong> and <strong>↓</strong> buttons next to each category
+      title (Venue, Food, …) to change the order of the categories and discuss the
+      most important ones first.
+    </p>
+  </div>
+  <div class="exchange-grid">
+    <div class="exchange-card">
+      <h3>Export</h3>
+      <p>Download the checklist exactly as it is currently filled in, in the current category order.</p>
+      <div class="exchange-actions">
+        <button type="button" class="exchange-button" id="export-xlsx">Export to XLS</button>
+        <button type="button" class="exchange-button" id="export-json">Export to JSON</button>
+      </div>
+      <p class="exchange-hint">
+        In the spreadsheet, edit the <strong>Selected</strong> (Yes/No),
+        <strong>Priority</strong> (M, S, O), <strong>Status</strong> (D, TD, R) and
+        <strong>Notes</strong> columns, and the <strong>Order</strong> column of the
+        <em>Categories</em> sheet. Keep the <strong>ID</strong> column unchanged so
+        each row can be matched when the file is imported.
+      </p>
+    </div>
+    <form class="exchange-card" id="import-form">
+      <h3>Import</h3>
+      <p>Load an exported file (.xlsx, .xls, .csv or .json) to fill in the checklist.</p>
+      <label class="exchange-label" for="import-file">Checklist file</label>
+      <input type="file" id="import-file" name="import_file" accept=".xlsx,.xls,.csv,.json,application/json,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv" required>
+      <fieldset class="exchange-mode">
+        <legend>Criteria that are not in the file</legend>
+        <label><input type="radio" name="import_mode" value="merge" checked> Keep their current values</label>
+        <label><input type="radio" name="import_mode" value="replace"> Clear them</label>
+      </fieldset>
+      <div class="exchange-actions">
+        <button type="submit" class="exchange-button primary">Import</button>
+        <button type="button" class="exchange-button" id="import-undo" hidden>Undo import</button>
+      </div>
+      <div id="import-report" class="import-report" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
 
 <!-- =========================================================
      CHECKLIST
      ========================================================= -->
 
-<div id="checklist"></div>
+<div id="checklist" class="notes-hidden"></div>
 
 
 <!-- =========================================================
@@ -896,20 +635,113 @@ permalink: /framework/
             document.createElement("section");
 
 
+          sectionElement.className =
+            "checklist-section";
+
+
+          sectionElement.dataset.section =
+            sectionName;
+
+
           /*
-           * Section heading.
+           * Section heading with the buttons to change the
+           * order of the categories.
            */
+
+          const sectionHeader =
+            document.createElement("div");
+
+
+          sectionHeader.className =
+            "section-header";
+
 
           const heading =
             document.createElement("h2");
 
 
-          heading.textContent =
-            sectionName;
+          const position =
+            document.createElement("span");
+
+
+          position.className =
+            "section-position";
+
+
+          heading.appendChild(
+            position
+          );
+
+
+          heading.appendChild(
+            document.createTextNode(sectionName)
+          );
+
+
+          const moveButtons =
+            document.createElement("div");
+
+
+          moveButtons.className =
+            "section-move";
+
+
+          [
+            { direction: -1, symbol: "↑", className: "move-section-up", label: "up" },
+            { direction: 1, symbol: "↓", className: "move-section-down", label: "down" }
+          ].forEach(move => {
+
+            const button =
+              document.createElement("button");
+
+
+            button.type =
+              "button";
+
+
+            button.className =
+              move.className;
+
+
+            button.textContent =
+              move.symbol;
+
+
+            button.title =
+              `Move ${sectionName} ${move.label}`;
+
+
+            button.setAttribute(
+              "aria-label",
+              `Move ${sectionName} ${move.label}`
+            );
+
+
+            button.addEventListener(
+              "click",
+              () => moveSection(sectionElement, move.direction, button)
+            );
+
+
+            moveButtons.appendChild(
+              button
+            );
+
+          });
+
+
+          sectionHeader.appendChild(
+            heading
+          );
+
+
+          sectionHeader.appendChild(
+            moveButtons
+          );
 
 
           sectionElement.appendChild(
-            heading
+            sectionHeader
           );
 
 
@@ -1020,6 +852,27 @@ permalink: /framework/
 
           headerRow.appendChild(
             statusHeader
+          );
+
+
+          /*
+           * Notes column (hidden unless enabled in the Controls).
+           */
+
+          const notesHeader =
+            document.createElement("th");
+
+
+          notesHeader.textContent =
+            "Notes";
+
+
+          notesHeader.className =
+            "notes-column";
+
+
+          headerRow.appendChild(
+            notesHeader
           );
 
 
@@ -1178,6 +1031,43 @@ permalink: /framework/
 
               /*
                * --------------------------------------------------
+               * Notes
+               * --------------------------------------------------
+               */
+
+              const notesCell =
+                document.createElement("td");
+
+
+              notesCell.className =
+                "notes-column";
+
+
+              const notes =
+                document.createElement("textarea");
+
+
+              notes.name =
+                `notes_${criterion.id}`;
+
+
+              notes.rows =
+                2;
+
+
+              notes.setAttribute(
+                "aria-label",
+                `Notes for ${criterion.text}`
+              );
+
+
+              notesCell.appendChild(
+                notes
+              );
+
+
+              /*
+               * --------------------------------------------------
                * Reusable Materials
                * --------------------------------------------------
                */
@@ -1266,6 +1156,11 @@ permalink: /framework/
 
 
               row.appendChild(
+                notesCell
+              );
+
+
+              row.appendChild(
                 resourcesCell
               );
 
@@ -1302,6 +1197,1127 @@ permalink: /framework/
     }
 
 
+
+    /*
+     * =========================================================
+     * CATEGORY ORDER AND NOTES COLUMN
+     * =========================================================
+     */
+
+    function getChecklistContainer() {
+
+      return document.getElementById("checklist");
+
+    }
+
+
+    function getSectionElements() {
+
+      const container = getChecklistContainer();
+
+      return container
+        ? Array.from(container.children).filter(element => element.classList.contains("checklist-section"))
+        : [];
+
+    }
+
+
+    /*
+     * Current order of the categories, as shown on the page.
+     */
+
+    function getSectionOrder() {
+
+      return getSectionElements().map(element => element.dataset.section);
+
+    }
+
+
+    function isDefaultOrder() {
+
+      const defaultOrder = Object.keys(checklist);
+
+      return getSectionOrder().every((name, index) => name === defaultOrder[index]);
+
+    }
+
+
+    /*
+     * Update the position numbers and enable/disable the move buttons.
+     */
+
+    function updateSectionControls() {
+
+      const sections = getSectionElements();
+
+      sections.forEach((element, index) => {
+
+        const position = element.querySelector(".section-position");
+        const up = element.querySelector(".move-section-up");
+        const down = element.querySelector(".move-section-down");
+
+        if (position) {
+          position.textContent = `${index + 1}.`;
+        }
+
+        if (up) {
+          up.disabled = index === 0;
+        }
+
+        if (down) {
+          down.disabled = index === sections.length - 1;
+        }
+
+      });
+
+      const reset = document.getElementById("reset-order");
+
+      if (reset) {
+        reset.disabled = isDefaultOrder();
+      }
+
+    }
+
+
+    /*
+     * Move a category one position up (-1) or down (+1).
+     */
+
+    function moveSection(sectionElement, direction, button) {
+
+      const container = getChecklistContainer();
+
+      if (direction < 0) {
+
+        const previous = sectionElement.previousElementSibling;
+
+        if (previous && previous.classList.contains("checklist-section")) {
+          container.insertBefore(sectionElement, previous);
+        }
+
+      } else {
+
+        const next = sectionElement.nextElementSibling;
+
+        if (next && next.classList.contains("checklist-section")) {
+          container.insertBefore(next, sectionElement);
+        }
+
+      }
+
+      updateSectionControls();
+
+      /*
+       * Keep the keyboard focus on the moved category.
+       */
+
+      if (button) {
+
+        const target = button.disabled
+          ? sectionElement.querySelector(direction < 0 ? ".move-section-down" : ".move-section-up")
+          : button;
+
+        if (target && !target.disabled) {
+          target.focus({ preventScroll: true });
+        }
+
+      }
+
+      sectionElement.scrollIntoView({ block: "nearest", behavior: "smooth" });
+
+    }
+
+
+    /*
+     * Put the categories in the given order. Categories not listed keep
+     * their relative order and are placed after the listed ones.
+     */
+
+    function applySectionOrder(order) {
+
+      const container = getChecklistContainer();
+
+      const byName = new Map(getSectionElements().map(element => [element.dataset.section, element]));
+
+      const placed = new Set();
+
+      order.forEach(name => {
+
+        const element = byName.get(name);
+
+        if (element && !placed.has(name)) {
+          container.appendChild(element);
+          placed.add(name);
+        }
+
+      });
+
+      byName.forEach((element, name) => {
+
+        if (!placed.has(name)) {
+          container.appendChild(element);
+        }
+
+      });
+
+      updateSectionControls();
+
+    }
+
+
+    function areNotesVisible() {
+
+      const container = getChecklistContainer();
+
+      return Boolean(container) && !container.classList.contains("notes-hidden");
+
+    }
+
+
+    function setNotesVisible(visible) {
+
+      const container = getChecklistContainer();
+
+      if (container) {
+        container.classList.toggle("notes-hidden", !visible);
+      }
+
+      const toggle = document.getElementById("toggle-notes");
+
+      if (toggle) {
+        toggle.checked = visible;
+      }
+
+    }
+
+
+    /*
+     * =========================================================
+     * EXPORT / IMPORT
+     * =========================================================
+     *
+     * The checklist can be exchanged as a spreadsheet (XLSX, via
+     * SheetJS) or as JSON. Both formats contain one entry per
+     * criterion, in the current category order:
+     *
+     *   Section | ID | Criterion | Selected | Priority | Status | Notes
+     *
+     * The category order is stored in the "Categories" sheet of the
+     * spreadsheet (Order | Category) and in "sectionOrder" in JSON.
+     *
+     * Rows are matched on import by ID (falling back to the
+     * criterion text), so the ID column must not be changed.
+     */
+
+    const EXCHANGE_FORMAT = "sustconf-checklist";
+
+    const EXCHANGE_VERSION = 2;
+
+    const EXPORT_COLUMNS = [
+      "Section",
+      "ID",
+      "Criterion",
+      "Selected",
+      "Priority",
+      "Status",
+      "Notes"
+    ];
+
+    let lastImportSnapshot = null;
+
+
+    /*
+     * Controls of a criterion row.
+     */
+
+    function getControls(id) {
+
+      return {
+        checkbox: document.getElementById(id),
+        priority: document.querySelector(`select[name="priority_${id}"]`),
+        status: document.querySelector(`select[name="status_${id}"]`),
+        notes: document.querySelector(`textarea[name="notes_${id}"]`)
+      };
+
+    }
+
+
+    /*
+     * Read the current checklist values from the page,
+     * in the order the categories are displayed.
+     */
+
+    function getChecklistState() {
+
+      const items = [];
+
+      getSectionOrder().forEach(sectionName => {
+
+        const section = checklist[sectionName];
+
+        if (!section) {
+          return;
+        }
+
+        section.criteria.forEach(criterion => {
+
+          const controls = getControls(criterion.id);
+
+          items.push({
+            section: sectionName,
+            id: criterion.id,
+            criterion: criterion.text,
+            selected: controls.checkbox ? controls.checkbox.checked : false,
+            priority: controls.priority ? controls.priority.value : "",
+            status: controls.status ? controls.status.value : "",
+            notes: controls.notes ? controls.notes.value : ""
+          });
+
+        });
+
+      });
+
+      return items;
+
+    }
+
+
+    /*
+     * Everything needed to restore the page (used by "Undo import").
+     */
+
+    function getPageSnapshot() {
+
+      return {
+        items: getChecklistState(),
+        order: getSectionOrder(),
+        showNotes: areNotesVisible()
+      };
+
+    }
+
+
+    /*
+     * Write values into one criterion row.
+     */
+
+    function setCriterionValues(id, values) {
+
+      const controls = getControls(id);
+
+      if (values.selected !== undefined && controls.checkbox) {
+        controls.checkbox.checked = values.selected;
+      }
+
+      if (values.priority !== undefined && controls.priority) {
+        controls.priority.value = values.priority;
+      }
+
+      if (values.status !== undefined && controls.status) {
+        controls.status.value = values.status;
+      }
+
+      if (values.notes !== undefined && controls.notes) {
+        controls.notes.value = values.notes;
+      }
+
+    }
+
+
+    function exportFileName(extension) {
+
+      const today = new Date().toISOString().slice(0, 10);
+
+      return `sustconf-checklist-${today}.${extension}`;
+
+    }
+
+
+    function downloadBlob(blob, fileName) {
+
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = fileName;
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    }
+
+
+    /*
+     * Export to JSON.
+     */
+
+    function exportJson() {
+
+      const data = {
+        format: EXCHANGE_FORMAT,
+        version: EXCHANGE_VERSION,
+        exportedAt: new Date().toISOString(),
+        sectionOrder: getSectionOrder(),
+        showNotes: areNotesVisible(),
+        legend: {
+          priority: { M: "Mandatory", S: "Strongly Recommended", O: "Optional" },
+          status: { D: "Done", TD: "TODO", R: "Rejected" }
+        },
+        items: getChecklistState()
+      };
+
+      const blob = new Blob(
+        [JSON.stringify(data, null, 2)],
+        { type: "application/json" }
+      );
+
+      downloadBlob(blob, exportFileName("json"));
+
+    }
+
+
+    /*
+     * Export to XLSX (opens in Excel, LibreOffice and Google Sheets).
+     */
+
+    function exportXlsx() {
+
+      if (typeof XLSX === "undefined") {
+
+        showImportReport(
+          "error",
+          "The spreadsheet library could not be loaded. Check your internet connection, or use Export to JSON."
+        );
+
+        return;
+
+      }
+
+      const rows = getChecklistState().map(item => ({
+        Section: item.section,
+        ID: item.id,
+        Criterion: item.criterion,
+        Selected: item.selected ? "Yes" : "No",
+        Priority: item.priority,
+        Status: item.status,
+        Notes: item.notes
+      }));
+
+      const sheet = XLSX.utils.json_to_sheet(rows, { header: EXPORT_COLUMNS });
+
+      sheet["!cols"] = [
+        { wch: 22 },
+        { wch: 34 },
+        { wch: 80 },
+        { wch: 10 },
+        { wch: 10 },
+        { wch: 10 },
+        { wch: 60 }
+      ];
+
+      sheet["!autofilter"] = {
+        ref: XLSX.utils.encode_range({
+          s: { r: 0, c: 0 },
+          e: { r: rows.length, c: EXPORT_COLUMNS.length - 1 }
+        })
+      };
+
+      const categories = XLSX.utils.aoa_to_sheet(
+        [["Order", "Category"]].concat(
+          getSectionOrder().map((name, index) => [index + 1, name])
+        )
+      );
+
+      categories["!cols"] = [{ wch: 8 }, { wch: 30 }];
+
+      const legend = XLSX.utils.aoa_to_sheet([
+        ["Column", "Allowed value", "Meaning"],
+        ["Selected", "Yes", "The criterion is selected"],
+        ["Selected", "No", "The criterion is not selected"],
+        ["Priority", "M", "Mandatory: the OC can only deviate with approval from the SC"],
+        ["Priority", "S", "Strongly Recommended: the OC may deviate but must justify it to the SC"],
+        ["Priority", "O", "Optional: the OC may deviate without justification"],
+        ["Priority", "(empty)", "Not defined yet"],
+        ["Status", "D", "Done: completed, no further action required"],
+        ["Status", "TD", "TODO: requires consideration or additional work"],
+        ["Status", "R", "Rejected: not included for this conference"],
+        ["Status", "(empty)", "Not defined yet"],
+        ["Notes", "Free text", "Comments, decisions or responsibilities for the criterion"],
+        [],
+        ["Note", "", "Do not change the ID column: it is used to match rows when importing the file."],
+        ["Note", "", "To change the order of the categories, edit the Order column in the Categories sheet."]
+      ]);
+
+      legend["!cols"] = [{ wch: 12 }, { wch: 14 }, { wch: 80 }];
+
+      const workbook = XLSX.utils.book_new();
+
+      XLSX.utils.book_append_sheet(workbook, sheet, "Checklist");
+      XLSX.utils.book_append_sheet(workbook, categories, "Categories");
+      XLSX.utils.book_append_sheet(workbook, legend, "Legend");
+
+      XLSX.writeFile(workbook, exportFileName("xlsx"));
+
+    }
+
+
+    /*
+     * ---------------------------------------------------------
+     * Import helpers
+     * ---------------------------------------------------------
+     */
+
+    function normalizeKey(key) {
+
+      return String(key).trim().toLowerCase().replace(/[^a-z]/g, "");
+
+    }
+
+
+    function pickField(row, names) {
+
+      for (const key of Object.keys(row)) {
+
+        if (names.includes(normalizeKey(key))) {
+          return row[key];
+        }
+
+      }
+
+      return undefined;
+
+    }
+
+
+    /*
+     * Accept codes ("M"), labels ("Mandatory (M)") or words ("mandatory").
+     * Returns the code, "" for empty, or null if the value is not valid.
+     */
+
+    function parseOption(value, options, words) {
+
+      if (value === undefined || value === null) {
+        return "";
+      }
+
+      const text = String(value).trim();
+
+      if (text === "") {
+        return "";
+      }
+
+      const upper = text.toUpperCase();
+
+      for (const option of options) {
+
+        if (option.value === "") {
+          continue;
+        }
+
+        if (upper === option.value || upper === option.label.toUpperCase()) {
+          return option.value;
+        }
+
+      }
+
+      const code = text.match(/\(([A-Za-z]+)\)/);
+
+      if (code && options.some(option => option.value === code[1].toUpperCase())) {
+        return code[1].toUpperCase();
+      }
+
+      const simplified = text.toLowerCase().replace(/[^a-z]/g, "");
+
+      for (const [word, optionValue] of Object.entries(words)) {
+
+        if (simplified.startsWith(word)) {
+          return optionValue;
+        }
+
+      }
+
+      return null;
+
+    }
+
+
+    function parsePriority(value) {
+
+      return parseOption(value, priorityOptions, {
+        mandatory: "M",
+        strongly: "S",
+        optional: "O"
+      });
+
+    }
+
+
+    function parseStatus(value) {
+
+      return parseOption(value, statusOptions, {
+        done: "D",
+        todo: "TD",
+        rejected: "R"
+      });
+
+    }
+
+
+    function parseSelected(value) {
+
+      if (typeof value === "boolean") {
+        return value;
+      }
+
+      if (typeof value === "number") {
+        return value !== 0;
+      }
+
+      const text = String(value === undefined || value === null ? "" : value)
+        .trim()
+        .toLowerCase();
+
+      if (["yes", "y", "true", "x", "1", "✓", "✔", "checked", "selected", "sim", "ja", "oui", "si", "sí"].includes(text)) {
+        return true;
+      }
+
+      if (["no", "n", "false", "0", "", "-", "unchecked", "não", "nao", "nein", "non"].includes(text)) {
+        return false;
+      }
+
+      return null;
+
+    }
+
+
+    /*
+     * Turn the content of a JSON file into rows and settings.
+     */
+
+    function parseJsonImport(data) {
+
+      const result = { rows: null, sectionOrder: null, showNotes: undefined };
+
+      if (Array.isArray(data)) {
+
+        result.rows = data;
+
+      } else if (data && Array.isArray(data.items)) {
+
+        result.rows = data.items;
+
+        if (Array.isArray(data.sectionOrder)) {
+          result.sectionOrder = data.sectionOrder.map(name => String(name));
+        }
+
+        if (typeof data.showNotes === "boolean") {
+          result.showNotes = data.showNotes;
+        }
+
+      } else if (data && typeof data === "object") {
+
+        /*
+         * Also accept a simple map: { "criterion_id": { priority, status, selected, notes } }
+         */
+
+        result.rows = Object.entries(data)
+          .filter(([, value]) => value && typeof value === "object" && !Array.isArray(value))
+          .map(([id, value]) => Object.assign({ id: id }, value));
+
+      } else {
+
+        throw new Error("The JSON file does not contain checklist items.");
+
+      }
+
+      return result;
+
+    }
+
+
+    /*
+     * Read the "Checklist" sheet (or the first sheet) and, if present,
+     * the "Categories" sheet with the category order.
+     */
+
+    function parseWorkbookImport(buffer) {
+
+      if (typeof XLSX === "undefined") {
+        throw new Error("The spreadsheet library could not be loaded. Check your internet connection, or import a JSON file.");
+      }
+
+      const workbook = XLSX.read(buffer, { type: "array" });
+
+      const findSheet = name =>
+        workbook.SheetNames.find(sheetName => sheetName.trim().toLowerCase() === name);
+
+      const sheetName = findSheet("checklist") || workbook.SheetNames[0];
+
+      if (!sheetName) {
+        throw new Error("The spreadsheet does not contain any sheet.");
+      }
+
+      const result = {
+        rows: XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { defval: "" }),
+        sectionOrder: null,
+        showNotes: undefined
+      };
+
+      const categoriesName = findSheet("categories");
+
+      if (categoriesName && categoriesName !== sheetName) {
+
+        const categoryRows = XLSX.utils.sheet_to_json(workbook.Sheets[categoriesName], { defval: "" });
+
+        const entries = categoryRows
+          .map((row, index) => {
+
+            const name = pickField(row, ["category", "section", "name"]);
+            const order = parseFloat(pickField(row, ["order", "position", "priority"]));
+
+            return {
+              name: name === undefined ? "" : String(name).trim(),
+              order: Number.isFinite(order) ? order : Number.MAX_SAFE_INTEGER,
+              index: index
+            };
+
+          })
+          .filter(entry => entry.name !== "");
+
+        entries.sort((a, b) => a.order - b.order || a.index - b.index);
+
+        if (entries.length > 0) {
+          result.sectionOrder = entries.map(entry => entry.name);
+        }
+
+      }
+
+      return result;
+
+    }
+
+
+    function readFile(file) {
+
+      return new Promise((resolve, reject) => {
+
+        const reader = new FileReader();
+
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error("The file could not be read."));
+
+        if (/\.json$/i.test(file.name) || file.type === "application/json") {
+          reader.readAsText(file);
+        } else {
+          reader.readAsArrayBuffer(file);
+        }
+
+      });
+
+    }
+
+
+    /*
+     * Apply an imported file to the checklist.
+     */
+
+    function applyImport(parsed, mode, fromSheet) {
+
+      const rows = parsed.rows;
+
+      const known = new Map();
+      const byText = new Map();
+
+      Object.values(checklist).forEach(section => {
+
+        section.criteria.forEach(criterion => {
+
+          known.set(criterion.id, criterion);
+          byText.set(criterion.text.trim().toLowerCase(), criterion);
+
+        });
+
+      });
+
+      const snapshot = getPageSnapshot();
+      const beforeById = new Map(snapshot.items.map(item => [item.id, item]));
+
+      const updates = new Map();
+      const warnings = [];
+
+      rows.forEach((row, index) => {
+
+        if (!row || typeof row !== "object") {
+          return;
+        }
+
+        /*
+         * Spreadsheet rows start at line 2 (line 1 is the header).
+         */
+
+        const line = fromSheet ? `Row ${index + 2}` : `Item ${index + 1}`;
+
+        const rawId = pickField(row, ["id"]);
+        const rawText = pickField(row, ["criterion", "text"]);
+
+        let criterion = null;
+
+        if (rawId !== undefined && String(rawId).trim() !== "") {
+          criterion = known.get(String(rawId).trim()) || null;
+        }
+
+        if (!criterion && rawText !== undefined && String(rawText).trim() !== "") {
+          criterion = byText.get(String(rawText).trim().toLowerCase()) || null;
+        }
+
+        if (!criterion) {
+
+          const allEmpty = Object.values(row).every(value => String(value).trim() === "");
+
+          if (!allEmpty) {
+            warnings.push(`${line}: unknown criterion "${rawId || rawText || "?"}", skipped.`);
+          }
+
+          return;
+
+        }
+
+        const values = {};
+
+        const rawSelected = pickField(row, ["selected", "check", "checked"]);
+
+        if (rawSelected !== undefined) {
+
+          const selected = parseSelected(rawSelected);
+
+          if (selected === null) {
+            warnings.push(`${line} (${criterion.id}): invalid Selected value "${rawSelected}", kept current value.`);
+          } else {
+            values.selected = selected;
+          }
+
+        }
+
+        const rawPriority = pickField(row, ["priority"]);
+
+        if (rawPriority !== undefined) {
+
+          const priority = parsePriority(rawPriority);
+
+          if (priority === null) {
+            warnings.push(`${line} (${criterion.id}): invalid Priority "${rawPriority}" (use M, S or O), kept current value.`);
+          } else {
+            values.priority = priority;
+          }
+
+        }
+
+        const rawStatus = pickField(row, ["status"]);
+
+        if (rawStatus !== undefined) {
+
+          const status = parseStatus(rawStatus);
+
+          if (status === null) {
+            warnings.push(`${line} (${criterion.id}): invalid Status "${rawStatus}" (use D, TD or R), kept current value.`);
+          } else {
+            values.status = status;
+          }
+
+        }
+
+        const rawNotes = pickField(row, ["notes", "note", "comments", "comment"]);
+
+        if (rawNotes !== undefined) {
+          values.notes = rawNotes === null ? "" : String(rawNotes);
+        }
+
+        if (updates.has(criterion.id)) {
+          warnings.push(`${line}: "${criterion.id}" appears more than once; the last row was used.`);
+        }
+
+        updates.set(criterion.id, values);
+
+      });
+
+      if (updates.size === 0) {
+        throw new Error("No checklist criteria were found in the file. Make sure it has an ID column (as in an exported file).");
+      }
+
+      /*
+       * Remember the state so the import can be undone.
+       */
+
+      lastImportSnapshot = snapshot;
+
+      if (mode === "replace") {
+
+        known.forEach((criterion, id) => {
+
+          if (!updates.has(id)) {
+            setCriterionValues(id, { selected: false, priority: "", status: "", notes: "" });
+          }
+
+        });
+
+      }
+
+      updates.forEach((values, id) => setCriterionValues(id, values));
+
+      /*
+       * Category order.
+       */
+
+      let orderChanged = false;
+
+      if (parsed.sectionOrder) {
+
+        const unknownSections = parsed.sectionOrder.filter(name => !checklist[name]);
+
+        unknownSections.forEach(name => {
+          warnings.push(`Unknown category "${name}" in the category order, ignored.`);
+        });
+
+        applySectionOrder(parsed.sectionOrder);
+
+        orderChanged = getSectionOrder().join("\n") !== snapshot.order.join("\n");
+
+      }
+
+      /*
+       * Notes column: follow the file setting (JSON), otherwise show
+       * the column when the file contains notes.
+       */
+
+      const afterItems = getChecklistState();
+
+      if (parsed.showNotes !== undefined) {
+        setNotesVisible(parsed.showNotes);
+      } else if (afterItems.some(item => item.notes.trim() !== "")) {
+        setNotesVisible(true);
+      }
+
+      /*
+       * Count and highlight what changed.
+       */
+
+      let changed = 0;
+
+      afterItems.forEach(item => {
+
+        const previous = beforeById.get(item.id);
+
+        const differs =
+          previous.selected !== item.selected ||
+          previous.priority !== item.priority ||
+          previous.status !== item.status ||
+          previous.notes !== item.notes;
+
+        if (differs) {
+
+          changed++;
+
+          const checkbox = document.getElementById(item.id);
+          const row = checkbox ? checkbox.closest("tr") : null;
+
+          if (row) {
+            row.classList.remove("imported-change");
+            void row.offsetWidth;
+            row.classList.add("imported-change");
+          }
+
+        }
+
+      });
+
+      return {
+        matched: updates.size,
+        total: known.size,
+        changed: changed,
+        orderChanged: orderChanged,
+        warnings: warnings
+      };
+
+    }
+
+
+    function escapeHtml(text) {
+
+      const div = document.createElement("div");
+
+      div.textContent = text;
+
+      return div.innerHTML;
+
+    }
+
+
+    function showImportReport(type, message, warnings) {
+
+      const report = document.getElementById("import-report");
+
+      if (!report) {
+        return;
+      }
+
+      let html = `<p><strong>${type === "error" ? "Import failed:" : "Done:"}</strong> ${escapeHtml(message)}</p>`;
+
+      if (warnings && warnings.length > 0) {
+
+        html += `<details open><summary>${warnings.length} warning${warnings.length === 1 ? "" : "s"}</summary><ul>`;
+
+        warnings.forEach(warning => {
+          html += `<li>${escapeHtml(warning)}</li>`;
+        });
+
+        html += "</ul></details>";
+
+      }
+
+      report.className = `import-report ${type}`;
+      report.innerHTML = html;
+
+    }
+
+
+    async function handleImport(event) {
+
+      event.preventDefault();
+
+      const form = event.target;
+      const input = document.getElementById("import-file");
+      const file = input.files && input.files[0];
+
+      if (!file) {
+        showImportReport("error", "Choose a file to import.");
+        return;
+      }
+
+      const mode = form.elements["import_mode"].value || "merge";
+
+      try {
+
+        const content = await readFile(file);
+
+        const fromSheet = typeof content !== "string";
+
+        let parsed;
+
+        if (fromSheet) {
+
+          parsed = parseWorkbookImport(content);
+
+        } else {
+
+          let data;
+
+          try {
+            data = JSON.parse(content);
+          } catch (error) {
+            throw new Error("The file is not valid JSON.");
+          }
+
+          parsed = parseJsonImport(data);
+
+        }
+
+        const result = applyImport(parsed, mode, fromSheet);
+
+        let message =
+          `"${file.name}" imported. ${result.matched} of ${result.total} criteria found in the file, ${result.changed} changed on the page.`;
+
+        if (result.orderChanged) {
+          message += " The category order was updated.";
+        }
+
+        showImportReport(
+          result.warnings.length > 0 ? "warning" : "success",
+          message,
+          result.warnings
+        );
+
+        document.getElementById("import-undo").hidden = false;
+
+        input.value = "";
+
+      } catch (error) {
+
+        console.error(error);
+
+        showImportReport("error", error.message || String(error));
+
+      }
+
+    }
+
+
+    function undoImport() {
+
+      if (!lastImportSnapshot) {
+        return;
+      }
+
+      lastImportSnapshot.items.forEach(item => setCriterionValues(item.id, item));
+
+      applySectionOrder(lastImportSnapshot.order);
+
+      setNotesVisible(lastImportSnapshot.showNotes);
+
+      lastImportSnapshot = null;
+
+      document.getElementById("import-undo").hidden = true;
+
+      showImportReport("success", "The last import was undone.");
+
+    }
+
+
+    function setupControls() {
+
+      const notesToggle = document.getElementById("toggle-notes");
+      const resetOrderButton = document.getElementById("reset-order");
+      const exportXlsxButton = document.getElementById("export-xlsx");
+      const exportJsonButton = document.getElementById("export-json");
+      const importForm = document.getElementById("import-form");
+      const undoButton = document.getElementById("import-undo");
+
+      if (notesToggle) {
+
+        notesToggle.checked = areNotesVisible();
+
+        notesToggle.addEventListener("change", () => setNotesVisible(notesToggle.checked));
+
+      }
+
+      if (resetOrderButton) {
+        resetOrderButton.addEventListener("click", () => applySectionOrder(Object.keys(checklist)));
+      }
+
+      if (exportXlsxButton) {
+        exportXlsxButton.addEventListener("click", exportXlsx);
+      }
+
+      if (exportJsonButton) {
+        exportJsonButton.addEventListener("click", exportJson);
+      }
+
+      if (importForm) {
+        importForm.addEventListener("submit", handleImport);
+      }
+
+      if (undoButton) {
+        undoButton.addEventListener("click", undoImport);
+      }
+
+      updateSectionControls();
+
+    }
+
+
     /*
      * Render the checklist when the page loads.
      */
@@ -1310,6 +2326,7 @@ permalink: /framework/
       "DOMContentLoaded",
       () => {
         renderChecklist();
+        setupControls();
       }
     );
 
